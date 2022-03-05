@@ -52,13 +52,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\Bloque.cs" />
-     <Compile Include="Assets\_Scripts\Bola.cs" />
-     <Compile Include="Assets\_Scripts\Jugador.cs" />
      <Compile Include="Assets\_Scripts\BloqueMadera.cs" />
+     <Compile Include="Assets\_Scripts\Bloque.cs" />
      <Compile Include="Assets\_Scripts\BloquePiedra.cs" />
-     <Compile Include="Assets\_Scripts\BloqueGoma.cs" />
+     <Compile Include="Assets\_Scripts\Bola.cs" />
      <Compile Include="Assets\_Scripts\BloqueBonus.cs" />
+     <Compile Include="Assets\_Scripts\Jugador.cs" />
+     <Compile Include="Assets\_Scripts\BloqueGoma.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
