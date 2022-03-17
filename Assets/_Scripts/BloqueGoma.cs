@@ -9,6 +9,10 @@ public class BloqueGoma : Bloque
     {
         resistencia = 1;
     }
+    public override void rebotarPelota(Collision collision)
+    {
+        base.rebotarPelota(collision);
+    }
 
     // Update is called once per frame
     public virtual void acelerarPelota()

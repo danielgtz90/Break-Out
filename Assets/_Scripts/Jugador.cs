@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,17 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         transform = this.gameObject.transform;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola")
+        {
+            Vector3 direccion = collision.contacts[0].point - transform.position;
+            direccion = direccion.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        }
+        
     }
 
     // Update is called once per frame
