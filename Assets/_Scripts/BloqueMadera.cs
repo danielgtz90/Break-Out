@@ -10,9 +10,9 @@ public class BloqueMadera : Bloque
         resistencia = 3;
     }
 
-    public override void rebotarPelota()
+    public override void rebotarPelota(Collision collision)
     {
-        base.rebotarPelota();
+        base.rebotarPelota(collision);
     }
 
     // Update is called once per frame

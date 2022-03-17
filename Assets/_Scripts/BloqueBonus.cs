@@ -9,6 +9,11 @@ public class BloqueBonus : Bloque
     {
         resistencia = 3;
     }
+    
+    public override void rebotarPelota(Collision collision)
+    {
+        base.rebotarPelota(collision);
+    }
 
     // Update is called once per frame
     public virtual void doblePelota()
