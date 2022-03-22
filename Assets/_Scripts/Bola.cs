@@ -24,9 +24,9 @@ public class Bola : MonoBehaviour
     {
         Vector3 posicionInicial = GameObject.FindGameObjectWithTag("Player").transform.position;
         posicionInicial.y += 1.0f;
-        this.transform.position = posicionInicial;
-        this.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
-        rigidbody = this.gameObject.GetComponent<Rigidbody>();
+        transform.position = posicionInicial;
+        transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
+        rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -41,14 +41,24 @@ public class Bola : MonoBehaviour
     }
     private void LateUpdate()
     {
+        // ReSharper disable once RedundantCheckBeforeAssignment
         if (direccion != Vector3.zero) direccion = Vector3.zero;
     }
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (!isGameStarted)
+            {
+                isGameStarted = true;
+                transform.SetParent(null);
+                GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
+            }
+        }
         if (control.salioAbajo)
         {
             BolaDestruida.Invoke();
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
 
         if (control.salioArriba)
@@ -85,15 +95,7 @@ public class Bola : MonoBehaviour
             control.enabled = false;
             Invoke("HabilitarControl",0.5f);
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (!isGameStarted)
-            {
-                isGameStarted = true;
-                this.transform.SetParent(null);
-                GetComponent<Rigidbody>().velocity = velocidadBola * Vector3.up;
-            }
-        }
+        
     }
 
     

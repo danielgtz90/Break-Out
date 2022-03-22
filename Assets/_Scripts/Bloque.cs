@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Bloque : MonoBehaviour
 {
-    public int resistencia = 1;
+    public int resistencia = 3;
     public UnityEvent aumentarPuntaje;
 
     public void OnCollisionEnter(Collision collision)
@@ -21,7 +21,10 @@ public class Bloque : MonoBehaviour
         Vector3 direccion = collision.contacts[0].point - transform.position;
         direccion = direccion.normalized;
         collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola*direccion;
-        resistencia--;
+        Debug.Log("se redujo la resistencia " + resistencia--);
+        //resistencia--;
+        
+        
     }
 
     // Start is called before the first frame update
@@ -36,7 +39,7 @@ public class Bloque : MonoBehaviour
         if (resistencia<=0)
         {
             aumentarPuntaje.Invoke();
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         
     }

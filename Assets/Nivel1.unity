@@ -346,6 +346,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 2598994724992468892, guid: a65a1d0a22f154a468d7866746dde200, type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2598994724992468892, guid: a65a1d0a22f154a468d7866746dde200, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8698666833695843176, guid: a65a1d0a22f154a468d7866746dde200, type: 3}
       propertyPath: velocidadPaddle
       value: 30
@@ -1206,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3205211806334121922, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5163341063965803299, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1216,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5163341063965803299, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.8
       objectReference: {fileID: 0}
     - target: {fileID: 5163341063965803299, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1248,6 +1260,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5163341063965803299, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6521240321147868388, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
+      propertyPath: isGameStarted
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6521240321147868388, guid: 4e45ed9443b9b44a59afddb7604fbc1c, type: 3}
@@ -1578,6 +1594,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1612805414985959045, guid: a67cde6566e2f49a39c4c62114b501ac, type: 3}
+      propertyPath: resistencia
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -1612805414985959045, guid: a67cde6566e2f49a39c4c62114b501ac, type: 3}
+      propertyPath: aumentarPuntaje.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1612805414985959045, guid: a67cde6566e2f49a39c4c62114b501ac, type: 3}
+      propertyPath: aumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1612805414985959045, guid: a67cde6566e2f49a39c4c62114b501ac, type: 3}
+      propertyPath: aumentarPuntaje.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 367421318820521984, guid: a67cde6566e2f49a39c4c62114b501ac, type: 3}
       propertyPath: m_Name
       value: BloquePiedra
