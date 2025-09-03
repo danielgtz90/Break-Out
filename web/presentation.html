@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reporte de proyecto Re-Sizing Charola Belvita">
+    <title>Presentación de Proyecto</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .card-shadow {
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1), 0 8px 15px -5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.15), 0 10px 20px -5px rgba(0, 0, 0, 0.08);
+        }
+        .progress-bar-fill {
+            background: linear-gradient(to right, #4c51bf, #805ad5);
+            animation: fill-progress 2s ease-in-out forwards;
+        }
+        @keyframes fill-progress { from { width: 0%; } to { width: 75%; } }
+        @keyframes resize-box {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .animated-box { animation: resize-box 5s ease-in-out infinite; position: relative; }
+        .animated-box .arrow-icon { position: absolute; color: #4c51bf; font-size: 1.5rem; }
+        .animated-box .arrow-top-left { top: 1rem; left: 1rem; transform: rotate(135deg); }
+        .animated-box .arrow-top-right { top: 1rem; right: 1rem; transform: rotate(-135deg); }
+        .animated-box .arrow-bottom-left { bottom: 1rem; left: 1rem; transform: rotate(45deg); }
+        .animated-box .arrow-bottom-right { bottom: 1rem; right: 1rem; transform: rotate(-45deg); }
+        .belvita-pattern {
+            background-color: #962846;
+            background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen flex flex-col items-center justify-center p-8">
+<main class="container mx-auto max-w-4xl w-full">
+    <div class="flex flex-col items-center justify-center text-center mb-16">
+        <img src="https://www.dropbox.com/scl/fi/z3o93xy8qn3txyhnos6ay/Logo-SmurfitWestrock.png?rlkey=qa1zhy8nae76u9mk4fabm8vxu&st=wqi2af5d&raw=1" alt="Logotipo de Smurfit Westrock" class="w-32 h-auto mb-4">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight leading-snug">Reporte de Proyecto</h1>
+        <h2 class="text-3xl md:text-4xl font-light text-indigo-700">Re-Sizing Charola Belvita</h2>
+    </div>
+
+    <div class="mb-12 flex flex-col items-center">
+        <div class="animated-box">
+            <img src="https://www.dropbox.com/scl/fi/usibnetuiyn1qnppzpx71/8055983.PNG?rlkey=6bi4bhyhb1tfgfmocukt7pp09&st=a1v9m6gn&raw=1" alt="Imagen del proyecto" class="max-w-xs md:max-w-sm lg:max-w-md h-auto rounded-lg">
+            <i class="fas fa-compress arrow-icon arrow-top-left" aria-hidden="true"></i>
+            <i class="fas fa-compress arrow-icon arrow-top-right" aria-hidden="true"></i>
+            <i class="fas fa-compress arrow-icon arrow-bottom-left" aria-hidden="true"></i>
+            <i class="fas fa-compress arrow-icon arrow-bottom-right" aria-hidden="true"></i>
+        </div>
+        <p class="mt-4 text-center text-gray-600"><em>Redimensionando la caja para un mejor ajuste</em></p>
+    </div>
+
+    <div class="space-y-12">
+        <section class="p-8 bg-white rounded-3xl card-shadow" id="objetivos">
+            <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-indigo-500 text-white rounded-full mr-4 mb-4 md:mb-0">
+                    <i class="fas fa-bullseye text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-indigo-800">Objetivos</h3>
+            </div>
+            <ul class="list-disc list-inside text-gray-700 space-y-3 text-lg">
+                <li>Solicitud inicial: redimensionar charola para evitar caídas.</li>
+                <li>Seguimiento: aumentar ángulo de desliz y añadir "glue assist" en solapas.</li>
+            </ul>
+        </section>
+
+        <section class="p-8 bg-white rounded-3xl card-shadow" id="impacto">
+            <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-green-500 text-white rounded-full mr-4 mb-4 md:mb-0">
+                    <i class="fas fa-chart-line text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-green-800">Impacto y Beneficios</h3>
+            </div>
+            <ul class="space-y-6 text-gray-700">
+                <li class="flex items-start">
+                    <i class="fas fa-dollar-sign text-green-600 mr-4 mt-1 text-xl" aria-hidden="true"></i>
+                    <p class="text-lg"><strong>Ahorro de material:</strong> Se aplica menos barniz en la parte inferior, lo que se traduce en un ahorro directo.</p>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-tachometer-alt text-green-600 mr-4 mt-1 text-xl" aria-hidden="true"></i>
+                    <p class="text-lg"><strong>Mejora de rendimiento:</strong> Aumenta el rendimiento de las máquinas del cliente gracias a las mejoras en el diseño de la charola.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="p-8 bg-white rounded-3xl card-shadow" id="equipo">
+            <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-indigo-500 text-white rounded-full mr-4 mb-4 md:mb-0">
+                    <i class="fas fa-users text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-indigo-800">Equipo</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-700">
+                <div class="flex items-center text-lg"><i class="fas fa-user-tie text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>Ejecutivo: Daniel Gutierrez</div>
+                <div class="flex items-center text-lg"><i class="fas fa-tools text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>Ingeniería: Raul Suarez</div>
+                <div class="flex items-center text-lg"><i class="fas fa-building text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>Gerente TIM: Cesar Torres</div>
+                <div class="flex items-center text-lg"><i class="fas fa-user-tie text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>BD: Saul Echavarria</div>
+                <div class="flex items-center text-lg"><i class="fas fa-tools text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>Ingeniería: Erika Ramirez</div>
+                <div class="flex items-center text-lg"><i class="fas fa-flask text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>R&amp;D: Paola Parra</div>
+                <div class="flex items-center text-lg"><i class="fas fa-users text-indigo-600 mr-3 text-xl" aria-hidden="true"></i>Líder de línea: Daniel Saucedo</div>
+            </div>
+        </section>
+
+        <section class="p-8 bg-white rounded-3xl card-shadow" id="avance">
+            <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-indigo-500 text-white rounded-full mr-4 mb-4 md:mb-0">
+                    <i class="fas fa-tasks text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-indigo-800">Avance</h3>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-10 overflow-hidden relative" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar-fill h-full rounded-full flex items-center justify-center text-white font-extrabold text-xl">75%</div>
+            </div>
+            <p class="text-gray-600 text-center mt-4">75% del proyecto completado</p>
+        </section>
+
+        <section class="p-8 bg-white rounded-3xl card-shadow" id="proximos-pasos">
+            <div class="flex flex-col md:flex-row items-start md:items-center mb-6">
+                <div class="w-12 h-12 flex items-center justify-center bg-indigo-500 text-white rounded-full mr-4 mb-4 md:mb-0">
+                    <i class="fas fa-rocket text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="text-3xl font-semibold text-indigo-800">Próximos Pasos</h3>
+            </div>
+            <ul class="space-y-6 text-gray-700">
+                <li class="flex items-start">
+                    <i class="fas fa-comment-dots text-indigo-600 mr-4 mt-1 text-xl" aria-hidden="true"></i>
+                    <p class="text-lg"><strong>Última reunión:</strong> Se colocó una PO por 5k iniciales.</p>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-arrow-right text-indigo-600 mr-4 mt-1 text-xl" aria-hidden="true"></i>
+                    <p class="text-lg"><strong>Pasos siguientes:</strong> FPA de 8 horas con todos los ajustes propuestos.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+</body>
+</html>
